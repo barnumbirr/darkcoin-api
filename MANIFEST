@@ -1,0 +1,8 @@
+STATS
+COPYING
+setup.py
+README.md
+darkcoin/__init__.py
+tests/darkcoin_tests.py
+darkcoin/darkcoin_api.py
+darkcoin/darkcoin_utils.py
