@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Darkcoin-api by c0ding</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Darkcoin-api</h1>
+        <p>Python API for the Darkcoin cryptocurrency.</p>
+
+        <p class="view"><a href="https://github.com/c0ding/darkcoin-api">View the Project on GitHub <small>c0ding/darkcoin-api</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/c0ding/darkcoin-api/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/c0ding/darkcoin-api/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/c0ding/darkcoin-api">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="-darkcoin-api" class="anchor" href="#-darkcoin-api"><span class="octicon octicon-link"></span></a>
+<img src="https://raw.github.com/c0ding/darkcoin-api/master/doc/darkcoin.png" height="55" alt="darkcoin" title="darkcoin"> darkcoin-api</h1>
+
+<p><a href="https://pypi.python.org/pypi/darkcoin/"><img src="http://img.shields.io/pypi/v/darkcoin.svg" alt="PyPi Version"></a>   <a href="https://pypi.python.org/pypi/darkcoin/"><img src="http://img.shields.io/pypi/dm/darkcoin.svg" alt="Downloads"></a></p>
+
+<p>darkcoin is an APACHE licensed library written in Python designed to provide a simple to use API for the Darkcoin cryptocurrency.</p>
+
+<h2>
+<a name="more-about-darkcoin" class="anchor" href="#more-about-darkcoin"><span class="octicon octicon-link"></span></a>More about Darkcoin:</h2>
+
+<p>Darkcoin was engineered to be a digital version of cash. Transactions are pooled together in the blockchain, making them anonymous from the wallet.</p>
+
+<p>You can send Darkcoin to family or friends, or pay for goods or services, anywhere in the world. The network is decentralized and free from middlemen. It's an anonymous payment system in your control. Darkcoin is a decentralized currency, meaning there are no banks to take a cut of your money.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation:</h2>
+
+<p>From source use</p>
+
+<pre><code>$ python setup.py install
+</code></pre>
+
+<p>or install from PyPi</p>
+
+<pre><code>$ pip install darkcoin
+</code></pre>
+
+<h2>
+<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
+
+<p>This API can currently retrieve the following stats from <a href="http://explorer.darkcoin.io/">explorer.darkcoin.io</a> and <a href="http://www.cryptocoincharts.info">CryptoCoin</a>:</p>
+
+<h3>
+<a name="network" class="anchor" href="#network"><span class="octicon octicon-link"></span></a>Network:</h3>
+
+<ul>
+<li>Difficulty:</li>
+</ul><pre><code>&gt;&gt;&gt; import darkcoin
+&gt;&gt;&gt; darkcoin.get_difficulty()
+1286234.254
+</code></pre>
+
+<ul>
+<li>Hashrate:</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.hashrate()
+14825354215
+</code></pre>
+
+<ul>
+<li>Block count:</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.block_count()
+73355.0
+</code></pre>
+
+<ul>
+<li>Total coins:</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.total_coins()
+4318521.0
+</code></pre>
+
+<h3>
+<a name="addresses" class="anchor" href="#addresses"><span class="octicon octicon-link"></span></a>Addresses:</h3>
+
+<ul>
+<li>Address balance:
+[PARAMETER] is required and should be a DRK address.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.addressbalance(PARAMETER)
+50.0
+</code></pre>
+
+<ul>
+<li>Address to hash:
+[PARAMETER] is required and should be a DRK address.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.addresstohash(PARAMETER)
+D73E63C04A6CBAD8D5DC94FDBEF5175D2364E32F
+</code></pre>
+
+<ul>
+<li>Check address:
+[PARAMETER] is required and can be any crypto address.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.checkaddress(PARAMETER)
+6F
+</code></pre>
+
+<ul>
+<li>Get received by address:
+[PARAMETER] is required and should be a DRK address.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.getreceivedbyaddress(PARAMETER)
+50.0
+</code></pre>
+
+<ul>
+<li>Get sent by address:
+[PARAMETER] is required and should be a DRK address.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.getsentbyaddress(PARAMETER)
+0
+</code></pre>
+
+<ul>
+<li>PUBKEY hash:
+[PARAMETER] is required and should be a PUBKEY.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.hashpubkey(PARAMETER)
+3687D874F0CC6D498290F3D789EEA20BDDD25020
+</code></pre>
+
+<ul>
+<li>Hash to address:
+[PARAMETER] is required and should be an address hash.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.hashtoaddress(PARAMETER)
+n194KCwPQJjti53z9gN6wh9wUChfVePEab
+</code></pre>
+
+<ul>
+<li>Translate address:
+[PARAMETER] is required and can be any crypto address.</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.translate_address(PARAMETER)
+n194KCwPQJjti53z9gN6wh9wUChfVePEab
+</code></pre>
+
+<ul>
+<li>Address/private key generation :</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.generate_address()
+{
+    "address": "mvtAbz75TgSuKe888vh76CczXD4pd8aqw3", 
+    "private_key": "cUba5Mx5iFye5TstsocsGX4YRncrTgzm1fQSRnWtcVqxVUVef2id" 
+}
+</code></pre>
+
+<h3>
+<a name="exchanges" class="anchor" href="#exchanges"><span class="octicon octicon-link"></span></a>Exchanges:</h3>
+
+<ul>
+<li>BTC:</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.to_btc()
+{
+    "latest_trade": "2014-05-23 12:26:35", 
+    "volume_btc": "11432.46", 
+    "price": "0.02620001", 
+    "price_before_24h": "0.01938800", 
+    "volume_first": "496722.792057532", 
+    "best_market": "mintpal", 
+    "volume_second": "11432.4638341046", 
+    "id": "drk/btc"
+}
+</code></pre>
+
+<ul>
+<li>LTC:</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.to_ltc()
+{
+    "latest_trade": "2014-05-23 11:58:36", 
+    "volume_btc": "4.54", 
+    "price": "1.49999000", 
+    "price_before_24h": "0.00000000", 
+    "volume_first": "173.949761137366", 
+    "best_market": "mintpal", 
+    "volume_second": "206.622965976596", 
+    "id": "drk/ltc"
+}
+</code></pre>
+
+<ul>
+<li>DOGE:</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.to_doge()
+{
+    "latest_trade": "2014-05-09 19:36:06", 
+    "volume_btc": "0.00", 
+    "price": "250.00000001", 
+    "price_before_24h": "250.00000001", 
+    "volume_first": "0", 
+    "best_market": "allcrypt", 
+    "volume_second": "0", 
+    "id": "drk/doge"
+}
+</code></pre>
+
+<ul>
+<li>USD:</li>
+</ul><pre><code>&gt;&gt;&gt; darkcoin.to_usd()
+{
+    "latest_trade": "2014-05-22 12:03:45", 
+    "volume_btc": "0.00", 
+    "price": "9.90000000", 
+    "price_before_24h": "9.90000000", 
+    "volume_first": "0.0355698296152695", 
+    "best_market": "exmoney", 
+    "volume_second": "0.373674205737188", 
+    "id": "drk/usd"
+}
+</code></pre>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License:</h2>
+
+<pre><code>  Apache v2.0 License
+  Copyright 2014 Martin Simon
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+</code></pre>
+
+<h2>
+<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful links:</h2>
+
+<ul>
+<li><a href="http://www.darkcoin.io/">Darkcoin website</a></li>
+<li><a href="http://explorer.darkcoin.io/">Darkcoin Blockexplorer</a></li>
+</ul><h2>
+<a name="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
+
+<p>If you feel like buying me a coffee (or a beer?), donations are welcome:</p>
+
+<pre><code>WDC : WbcWJzVD8yXt3yLnnkCZtwQo4YgSUdELkj
+DRK : F2Zs4igv8r4oJJzh4sh4bGmeqoUxLQHPki
+DOGE: DRBkryyau5CMxpBzVmrBAjK6dVdMZSBsuS
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/c0ding">c0ding</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
