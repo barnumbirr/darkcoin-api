@@ -1,18 +1,18 @@
   
    Analyzing: https://github.com/c0ding/darkcoin-api/blob/master/darkcoin/darkcoin_api.py
 
-              Total Lines: 174
+              Total Lines: 181
 
-               Code Lines: 71 (40.8045%)
-              Blank Lines: 59 (33.9080%)
+               Code Lines: 76 (41.9889%)
+              Blank Lines: 61 (33.7016%)
 
-            Comment Lines: 1 (0.57471%)
-         Doc String Lines: 43 (24.7126%)
+            Comment Lines: 1 (0.55248%)
+         Doc String Lines: 43 (23.7569%)
           Inline Comments: 1
               Doc Strings: 19
            Total Comments: 21
 
-        Longest Code Line: 111
+        Longest Code Line: 102
        Shortest Code Line: 12 [return e[-1]]
 
      Longest Comment Line: 23
@@ -25,8 +25,8 @@
            Try Statements: 0
         Except Statements: 0
          Print Statements: 0
-              Assignments: 27
-                Variables: 7
+              Assignments: 32
+                Variables: 8
 
 
   Done analyzing: https://github.com/c0ding/darkcoin-api/blob/master/darkcoin/darkcoin_api.py
@@ -36,13 +36,13 @@
 
   Analyzing: https://github.com/c0ding/darkcoin-api/blob/master/darkcoin/darkcoin_utils.py
 
-              Total Lines: 206
+              Total Lines: 213
 
-               Code Lines: 145 (70.3883%)
-              Blank Lines: 48 (23.3009%)
+               Code Lines: 150 (70.4225%)
+              Blank Lines: 50 (23.4741%)
 
-            Comment Lines: 1 (0.48543%)
-         Doc String Lines: 12 (5.82524%)
+            Comment Lines: 1 (0.46948%)
+         Doc String Lines: 12 (5.63380%)
           Inline Comments: 1
               Doc Strings: 3
            Total Comments: 5
@@ -60,8 +60,8 @@
            Try Statements: 0
         Except Statements: 0
          Print Statements: 1
-              Assignments: 64
-                Variables: 46
+              Assignments: 69
+                Variables: 48
 
 
   Done analyzing: https://github.com/c0ding/darkcoin-api/blob/master/darkcoin/darkcoin_utils.py
