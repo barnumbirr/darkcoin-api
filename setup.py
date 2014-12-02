@@ -5,7 +5,7 @@ from distutils.core import setup
 
 setup(
     name = 'darkcoin',
-    version = '0.1',
+    version = '0.2',
     url = 'https://github.com/c0ding/darkcoin-api',
     download_url = 'https://github.com/c0ding/darkcoin-api/archive/master.zip',
     author = 'c0ding',
