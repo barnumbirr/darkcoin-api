@@ -7,12 +7,6 @@ import ctypes
 import hashlib
 import ctypes.util
 
-__title__   = 'darkcoin'
-__version__ = '0.2'
-__author__  = '@c0ding'
-__repo__    = 'https://github.com/c0ding/darkcoin-api'
-__license__ = 'Apache v2.0 License'
-
 """This part of the code is where the magic happens.
    # Joric/bitcoin-dev, june 2012, public domain
    # modified by c0ding, 2014
@@ -192,9 +186,8 @@ def reencode(pkey,version=0):
 	print get_addr(gen_eckey(pkey))
 
 
-DRK_BLOCKEXPLORER = 'http://explorer.darkcoin.io/chain/Darkcoin/q/'
-CRYPTOCOIN_API = 'http://api.cryptocoincharts.info/tradingPair/'
-
+DRK_BLOCKEXPLORER = 'http://explorer.darkcoin.io/chain/DarkCoin/q/'
+CRYPTOCOIN_API = 'http://www.cryptocoincharts.info/v2/api/tradingPair/'
 
 def blockexplorer(*suffix):
 	"""Returns the entrypoint URL for the Darkcoin block API.

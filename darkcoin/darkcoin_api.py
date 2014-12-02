@@ -2,20 +2,17 @@
 # -*- coding: utf-8 -*-
 
 import json
-import urllib2
+import urllib
 from darkcoin_utils import get_addr
 from darkcoin_utils import exchange
 from darkcoin_utils import gen_eckey
 from darkcoin_utils import blockexplorer
 
 __title__   = 'darkcoin'
-__version__ = '0.2'
+__version__ = '0.1'
 __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/darkcoin-api'
 __license__ = 'Apache v2.0 License'
-
-
-BROWSER_HEADER = {'User-Agent' : 'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/36.0'}
 
 
 def about():
@@ -27,7 +24,7 @@ def about():
 def difficulty():
 	"""Returns the current network difficulty."""
 
-	d = urllib2.urlopen(blockexplorer('getdifficulty'))
+	d = urllib.urlopen(blockexplorer('getdifficulty'))
 	return float(d.read())
 
 
@@ -36,7 +33,7 @@ def hashrate():
 
 	c = block_count()
 	blocks = "%.0f" %c
-	d = urllib2.urlopen(blockexplorer('nethash') + '/' + str(blocks))
+	d = urllib.urlopen(blockexplorer('nethash') + '/' + str(blocks))
 	last_line = d.readlines()[-1]
 	e = last_line.split(',')
 	return e[-1]
@@ -47,14 +44,14 @@ def block_count():
 	   Equivalent to Bitcoin's getblockcount.
 	"""
 
-	d = urllib2.urlopen(blockexplorer('getblockcount'))
+	d = urllib.urlopen(blockexplorer('getblockcount'))
 	return float(d.read())
 
 
 def total_coins():
 	"""Returns the number of Darkcoin mined."""
 	
-	d = urllib2.urlopen(blockexplorer('totalbc'))
+	d = urllib.urlopen(blockexplorer('totalbc'))
 	return float(d.read())
 
 
@@ -63,7 +60,7 @@ def addressbalance(PARAMETER):
 	   [PARAMETER] is required and should be a DRK address.
 	"""
 	
-	d = urllib2.urlopen(blockexplorer('addressbalance') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('addressbalance') + '/' + str(PARAMETER))
 	return float(d.read())
 
 
@@ -72,7 +69,7 @@ def addresstohash(PARAMETER):
 	   [PARAMETER] is required and should be a DRK address.
 	"""
 	
-	d = urllib2.urlopen(blockexplorer('addresstohash') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('addresstohash') + '/' + str(PARAMETER))
 	return d.read()
 
 
@@ -82,7 +79,7 @@ def checkaddress(PARAMETER):
 	   [PARAMETER] is required and can be any crypto address.
 	"""
 
-	d = urllib2.urlopen(blockexplorer('checkaddress') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('checkaddress') + '/' + str(PARAMETER))
 	return d.read()
 
 
@@ -91,7 +88,7 @@ def decode_address(PARAMETER):
 	    [PARAMETER] is required and can be any crypto address.
 	 """
 
-	 d = urllib2.urlopen(blockexplorer('decode_address') + '/' + str(PARAMETER))
+	 d = urllib.urlopen(blockexplorer('decode_address') + '/' + str(PARAMETER))
 	 return d.read()
 
 
@@ -100,7 +97,7 @@ def getreceivedbyaddress(PARAMETER):
 	   [PARAMETER] is required and should be a DRK address.
 	"""
 
-	d = urllib2.urlopen(blockexplorer('getreceivedbyaddress') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('getreceivedbyaddress') + '/' + str(PARAMETER))
 	return d.read()
 
 
@@ -109,7 +106,7 @@ def getsentbyaddress(PARAMETER):
 	   [PARAMETER] is required and should be a DRK address.
 	"""
 
-	d = urllib2.urlopen(blockexplorer('getsentbyaddress') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('getsentbyaddress') + '/' + str(PARAMETER))
 	return d.read()
 
 
@@ -118,7 +115,7 @@ def hashpubkey(PARAMETER):
 	   [PARAMETER] is required and should be a PUBKEY.
 	"""
 
-	d = urllib2.urlopen(blockexplorer('hashpubkey') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('hashpubkey') + '/' + str(PARAMETER))
 	return d.read()
 
 
@@ -127,7 +124,7 @@ def hashtoaddress(PARAMETER):
 	   [PARAMETER] is required and should be an address hash.
 	"""
 
-	d = urllib2.urlopen(blockexplorer('hashtoaddress') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('hashtoaddress') + '/' + str(PARAMETER))
 	return d.read()
 
 
@@ -136,7 +133,7 @@ def translate_address(PARAMETER):
 	   [PARAMETER] is required and can be any crypto address.
 	"""
 
-	d = urllib2.urlopen(blockexplorer('translate_address') + '/' + str(PARAMETER))
+	d = urllib.urlopen(blockexplorer('translate_address') + '/' + str(PARAMETER))
 	return d.read()
 	
 
@@ -151,31 +148,27 @@ def generate_address():
 
 def to_btc():
 	"""Returns array with trading pair object."""
-
-	c = urllib2.Request(exchange('drk_btc'), headers = BROWSER_HEADER)
-	d = urllib2.urlopen(c)
+	
+	d = urllib.urlopen(exchange('drk_btc'))
 	return json.loads(d.read())
 
 
 def to_ltc():
 	"""Returns array with trading pair object."""
-
-	c = urllib2.Request(exchange('drk_ltc'), headers = BROWSER_HEADER)
-	d = urllib2.urlopen(c)
+	
+	d = urllib.urlopen(exchange('drk_ltc'))
 	return json.loads(d.read())
 
 
 def to_doge():
 	"""Returns array with trading pair object."""
-
-	c = urllib2.Request(exchange('drk_doge'), headers = BROWSER_HEADER)
-	d = urllib2.urlopen(c)
+	
+	d = urllib.urlopen(exchange('drk_doge'))
 	return json.loads(d.read())
 	
 
 def to_usd():
 	"""Returns array with trading pair object."""
-
-	c = urllib2.Request(exchange('drk_usd'), headers = BROWSER_HEADER)
-	d = urllib2.urlopen(c)
+	
+	d = urllib.urlopen(exchange('drk_usd'))
 	return json.loads(d.read())
