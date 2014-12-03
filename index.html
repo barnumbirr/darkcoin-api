@@ -29,22 +29,23 @@
       </header>
       <section>
         <h1>
-<a name="-darkcoin-api" class="anchor" href="#-darkcoin-api"><span class="octicon octicon-link"></span></a>
+<a id="-darkcoin-api" class="anchor" href="#-darkcoin-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>
 <img src="https://raw.github.com/c0ding/darkcoin-api/master/doc/darkcoin.png" height="55" alt="darkcoin" title="darkcoin"> darkcoin-api</h1>
 
-<p><a href="https://pypi.python.org/pypi/darkcoin/"><img src="http://img.shields.io/pypi/v/darkcoin.svg" alt="PyPi Version"></a>   <a href="https://pypi.python.org/pypi/darkcoin/"><img src="http://img.shields.io/pypi/dm/darkcoin.svg" alt="Downloads"></a></p>
+<p><a href="https://pypi.python.org/pypi/darkcoin/"><img src="http://img.shields.io/pypi/v/darkcoin.svg" alt="PyPi Version"></a>   <a href="https://pypi.python.org/pypi/darkcoin/"><img src="http://img.shields.io/pypi/dm/darkcoin.svg" alt="Downloads"></a>
+<a href="http://jenkins.calypso.pm/job/darkcoin-api/"><img src="http://jenkins.calypso.pm/buildStatus/icon?job=darkcoin-api" alt="Build Status"></a></p>
 
 <p>darkcoin is an APACHE licensed library written in Python designed to provide a simple to use API for the Darkcoin cryptocurrency.</p>
 
 <h2>
-<a name="more-about-darkcoin" class="anchor" href="#more-about-darkcoin"><span class="octicon octicon-link"></span></a>More about Darkcoin:</h2>
+<a id="more-about-darkcoin" class="anchor" href="#more-about-darkcoin" aria-hidden="true"><span class="octicon octicon-link"></span></a>More about Darkcoin:</h2>
 
 <p>Darkcoin was engineered to be a digital version of cash. Transactions are pooled together in the blockchain, making them anonymous from the wallet.</p>
 
 <p>You can send Darkcoin to family or friends, or pay for goods or services, anywhere in the world. The network is decentralized and free from middlemen. It's an anonymous payment system in your control. Darkcoin is a decentralized currency, meaning there are no banks to take a cut of your money.</p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation:</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation:</h2>
 
 <p>From source use</p>
 
@@ -57,100 +58,126 @@
 </code></pre>
 
 <h2>
-<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
+<a id="api-documentation" class="anchor" href="#api-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
 
 <p>This API can currently retrieve the following stats from <a href="http://explorer.darkcoin.io/">explorer.darkcoin.io</a> and <a href="http://www.cryptocoincharts.info">CryptoCoin</a>:</p>
 
 <h3>
-<a name="network" class="anchor" href="#network"><span class="octicon octicon-link"></span></a>Network:</h3>
+<a id="network" class="anchor" href="#network" aria-hidden="true"><span class="octicon octicon-link"></span></a>Network:</h3>
 
 <ul>
 <li>Difficulty:</li>
-</ul><pre><code>&gt;&gt;&gt; import darkcoin
+</ul>
+
+<pre><code>&gt;&gt;&gt; import darkcoin
 &gt;&gt;&gt; darkcoin.get_difficulty()
 1286234.254
 </code></pre>
 
 <ul>
 <li>Hashrate:</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.hashrate()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.hashrate()
 14825354215
 </code></pre>
 
 <ul>
 <li>Block count:</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.block_count()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.block_count()
 73355.0
 </code></pre>
 
 <ul>
 <li>Total coins:</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.total_coins()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.total_coins()
 4318521.0
 </code></pre>
 
 <h3>
-<a name="addresses" class="anchor" href="#addresses"><span class="octicon octicon-link"></span></a>Addresses:</h3>
+<a id="addresses" class="anchor" href="#addresses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Addresses:</h3>
 
 <ul>
 <li>Address balance:
 [PARAMETER] is required and should be a DRK address.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.addressbalance(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.addressbalance(PARAMETER)
 50.0
 </code></pre>
 
 <ul>
 <li>Address to hash:
 [PARAMETER] is required and should be a DRK address.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.addresstohash(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.addresstohash(PARAMETER)
 D73E63C04A6CBAD8D5DC94FDBEF5175D2364E32F
 </code></pre>
 
 <ul>
 <li>Check address:
 [PARAMETER] is required and can be any crypto address.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.checkaddress(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.checkaddress(PARAMETER)
 6F
 </code></pre>
 
 <ul>
 <li>Get received by address:
 [PARAMETER] is required and should be a DRK address.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.getreceivedbyaddress(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.getreceivedbyaddress(PARAMETER)
 50.0
 </code></pre>
 
 <ul>
 <li>Get sent by address:
 [PARAMETER] is required and should be a DRK address.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.getsentbyaddress(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.getsentbyaddress(PARAMETER)
 0
 </code></pre>
 
 <ul>
 <li>PUBKEY hash:
 [PARAMETER] is required and should be a PUBKEY.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.hashpubkey(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.hashpubkey(PARAMETER)
 3687D874F0CC6D498290F3D789EEA20BDDD25020
 </code></pre>
 
 <ul>
 <li>Hash to address:
 [PARAMETER] is required and should be an address hash.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.hashtoaddress(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.hashtoaddress(PARAMETER)
 n194KCwPQJjti53z9gN6wh9wUChfVePEab
 </code></pre>
 
 <ul>
 <li>Translate address:
 [PARAMETER] is required and can be any crypto address.</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.translate_address(PARAMETER)
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.translate_address(PARAMETER)
 n194KCwPQJjti53z9gN6wh9wUChfVePEab
 </code></pre>
 
 <ul>
 <li>Address/private key generation :</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.generate_address()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.generate_address()
 {
     "address": "mvtAbz75TgSuKe888vh76CczXD4pd8aqw3", 
     "private_key": "cUba5Mx5iFye5TstsocsGX4YRncrTgzm1fQSRnWtcVqxVUVef2id" 
@@ -158,11 +185,13 @@ n194KCwPQJjti53z9gN6wh9wUChfVePEab
 </code></pre>
 
 <h3>
-<a name="exchanges" class="anchor" href="#exchanges"><span class="octicon octicon-link"></span></a>Exchanges:</h3>
+<a id="exchanges" class="anchor" href="#exchanges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exchanges:</h3>
 
 <ul>
 <li>BTC:</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.to_btc()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.to_btc()
 {
     "latest_trade": "2014-05-23 12:26:35", 
     "volume_btc": "11432.46", 
@@ -177,7 +206,9 @@ n194KCwPQJjti53z9gN6wh9wUChfVePEab
 
 <ul>
 <li>LTC:</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.to_ltc()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.to_ltc()
 {
     "latest_trade": "2014-05-23 11:58:36", 
     "volume_btc": "4.54", 
@@ -192,7 +223,9 @@ n194KCwPQJjti53z9gN6wh9wUChfVePEab
 
 <ul>
 <li>DOGE:</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.to_doge()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.to_doge()
 {
     "latest_trade": "2014-05-09 19:36:06", 
     "volume_btc": "0.00", 
@@ -207,7 +240,9 @@ n194KCwPQJjti53z9gN6wh9wUChfVePEab
 
 <ul>
 <li>USD:</li>
-</ul><pre><code>&gt;&gt;&gt; darkcoin.to_usd()
+</ul>
+
+<pre><code>&gt;&gt;&gt; darkcoin.to_usd()
 {
     "latest_trade": "2014-05-22 12:03:45", 
     "volume_btc": "0.00", 
@@ -221,7 +256,7 @@ n194KCwPQJjti53z9gN6wh9wUChfVePEab
 </code></pre>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License:</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License:</h2>
 
 <pre><code>  Apache v2.0 License
   Copyright 2014 Martin Simon
@@ -241,13 +276,15 @@ n194KCwPQJjti53z9gN6wh9wUChfVePEab
 </code></pre>
 
 <h2>
-<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful links:</h2>
+<a id="useful-links" class="anchor" href="#useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful links:</h2>
 
 <ul>
 <li><a href="http://www.darkcoin.io/">Darkcoin website</a></li>
 <li><a href="http://explorer.darkcoin.io/">Darkcoin Blockexplorer</a></li>
-</ul><h2>
-<a name="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
+</ul>
+
+<h2>
+<a id="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
 
 <p>If you feel like buying me a coffee (or a beer?), donations are welcome:</p>
 
