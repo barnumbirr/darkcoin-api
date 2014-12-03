@@ -1,8 +1,7 @@
 <h1><img src="https://raw.github.com/c0ding/darkcoin-api/master/doc/darkcoin.png" height=55 alt="darkcoin" title="darkcoin"> darkcoin-api</h1>
 
 [![PyPi Version](http://img.shields.io/pypi/v/darkcoin.svg)](https://pypi.python.org/pypi/darkcoin/)   [![Downloads](http://img.shields.io/pypi/dm/darkcoin.svg)](https://pypi.python.org/pypi/darkcoin/)
-[![Build Status](http://jenkins.calypso.pm/buildStatus/icon?job=darkcoin-api)](http://jenkins.calypso.pm/job/darkcoin-api/)
-<img src="http://jenkins.calypso.pm/buildStatus/icon?job=darkcoin-api">
+[![Build Status](http://jenkins.calypso.pm/job/darkcoin-api/badge/icon)](http://jenkins.calypso.pm/job/darkcoin-api/)
 
 
 darkcoin is an APACHE licensed library written in Python designed to provide a simple to use API for the Darkcoin cryptocurrency.
