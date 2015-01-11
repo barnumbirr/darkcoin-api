@@ -13,8 +13,8 @@ __repo__    = 'https://github.com/c0ding/darkcoin-api'
 __license__ = 'Apache v2.0 License'
 
 """This part of the code is where the magic happens.
-   # Joric/bitcoin-dev, june 2012, public domain
-   # modified by c0ding, 2014
+Joric/bitcoin-dev, june 2012, public domain
+modified by c0ding, 2014
 """
 
 ssl = ctypes.cdll.LoadLibrary (ctypes.util.find_library ('ssl') or 'libeay32')
