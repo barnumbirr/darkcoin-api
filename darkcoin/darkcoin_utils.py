@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
 import json
 import ctypes
 import hashlib
@@ -70,8 +69,8 @@ class KEY:
 		
 	def get_secret(self):
 		bn = ssl.EC_KEY_get0_private_key(self.k);
-		bytes = (ssl.BN_num_bits(bn) + 7) / 8
-		mb = ctypes.create_string_buffer(bytes)
+		_bytes = (ssl.BN_num_bits(bn) + 7) / 8
+		mb = ctypes.create_string_buffer(_bytes)
 		n = ssl.BN_bn2bin(bn, mb);
 		return mb.raw.rjust(32, chr(0))
 
@@ -201,13 +200,14 @@ def blockexplorer(*suffix):
 	   All data provided by explorer.darkcoin.io.
 	   http://explorer.darkcoin.io/
 	"""
-	
+
 	return DRK_BLOCKEXPLORER + '/'.join(suffix)
+
 
 def exchange(*suffix):
 	"""Returns the entrypoint URL for the Darkcoin price API.
 	   All data provided by CryptoCoin.
 	   http://www.cryptocoincharts.info
 	"""
-	
+
 	return CRYPTOCOIN_API + '/'.join(suffix)

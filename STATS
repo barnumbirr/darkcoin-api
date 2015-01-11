@@ -1,16 +1,16 @@
   
    Analyzing: https://github.com/c0ding/darkcoin-api/blob/master/darkcoin/darkcoin_api.py
 
-              Total Lines: 181
+              Total Lines: 169
 
-               Code Lines: 76 (41.9889%)
-              Blank Lines: 61 (33.7016%)
+               Code Lines: 76 (44.9704%)
+              Blank Lines: 62 (36.6863%)
 
-            Comment Lines: 1 (0.55248%)
-         Doc String Lines: 43 (23.7569%)
+            Comment Lines: 1 (0.59171%)
+         Doc String Lines: 30 (17.7514%)
           Inline Comments: 1
-              Doc Strings: 19
-           Total Comments: 21
+              Doc Strings: 30
+           Total Comments: 32
 
         Longest Code Line: 102
        Shortest Code Line: 12 [return e[-1]]
@@ -38,8 +38,8 @@
 
               Total Lines: 213
 
-               Code Lines: 150 (70.4225%)
-              Blank Lines: 50 (23.4741%)
+               Code Lines: 149 (69.9530%)
+              Blank Lines: 51 (23.9436%)
 
             Comment Lines: 1 (0.46948%)
          Doc String Lines: 12 (5.63380%)
@@ -53,7 +53,7 @@
      Longest Comment Line: 23
     Shortest Comment Line: 23 [# -*- coding: utf-8 ...]
 
-                  Imports: 5
+                  Imports: 4
                 Functions: 20
                   Classes: 1
             If Statements: 17
@@ -71,12 +71,12 @@
 
   Analyzing: https://github.com/c0ding/darkcoin-api/blob/master/darkcoin/__init__.py
 
-              Total Lines: 23
+              Total Lines: 22
 
-               Code Lines: 13 (56.5217%)
-              Blank Lines: 3 (13.0434%)
+               Code Lines: 12 (54.5454%)
+              Blank Lines: 3 (13.6363%)
 
-            Comment Lines: 7 (30.4347%)
+            Comment Lines: 7 (31.8181%)
          Doc String Lines: 0 (0.0%)
           Inline Comments: 1
               Doc Strings: 0
@@ -88,7 +88,7 @@
      Longest Comment Line: 42
     Shortest Comment Line: 42 [#  \__,_|\__,_|_|  |...]
 
-                  Imports: 2
+                  Imports: 1
                 Functions: 0
                   Classes: 0
             If Statements: 0

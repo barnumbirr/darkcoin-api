@@ -14,7 +14,6 @@ __author__  = '@c0ding'
 __repo__    = 'https://github.com/c0ding/darkcoin-api'
 __license__ = 'Apache v2.0 License'
 
-import darkcoin_utils
 from darkcoin_api import (
 	about, difficulty, hashrate, block_count, total_coins, addressbalance,
 	addresstohash, checkaddress, decode_address, getreceivedbyaddress,
