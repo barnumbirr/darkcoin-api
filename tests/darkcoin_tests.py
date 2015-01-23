@@ -7,10 +7,10 @@ sys.path.insert(0, os.path.abspath('..'))
 import unittest
 import darkcoin
 
-__title__   = 'darkcoin'
+__title__ = 'darkcoin'
 __version__ = '0.2'
-__author__  = '@c0ding'
-__repo__    = 'https://github.com/c0ding/darkcoin-api'
+__author__ = '@c0ding'
+__repo__ = 'https://github.com/c0ding/darkcoin-api'
 __license__ = 'Apache v2.0 License'
 
 class darkcointestsuite(unittest.TestCase):

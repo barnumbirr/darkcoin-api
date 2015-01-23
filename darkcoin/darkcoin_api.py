@@ -8,14 +8,14 @@ from darkcoin_utils import exchange
 from darkcoin_utils import gen_eckey
 from darkcoin_utils import blockexplorer
 
-__title__   = 'darkcoin'
+__title__ = 'darkcoin'
 __version__ = '0.2'
-__author__  = '@c0ding'
-__repo__    = 'https://github.com/c0ding/darkcoin-api'
+__author__ = '@c0ding'
+__repo__ = 'https://github.com/c0ding/darkcoin-api'
 __license__ = 'Apache v2.0 License'
 
 
-BROWSER_HEADER = {'User-Agent' : 'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/36.0'}
+BROWSER_HEADER = {'User-Agent': 'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/36.0'}
 
 
 def about():
@@ -43,8 +43,9 @@ def hashrate():
 
 
 def block_count():
-	"""Returns the number of blocks in the longest block chain.
-	   Equivalent to Bitcoin's getblockcount.
+	"""
+	Returns the number of blocks in the longest block chain.
+	Equivalent to Bitcoin's getblockcount.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('getblockcount'))
@@ -59,8 +60,9 @@ def total_coins():
 
 
 def addressbalance(PARAMETER):
-	"""Returns the address balance.
-	   [PARAMETER] is required and should be a DRK address.
+	"""
+	Returns the address balance.
+	[PARAMETER] is required and should be a DRK address.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('addressbalance') + '/' + str(PARAMETER))
@@ -68,8 +70,9 @@ def addressbalance(PARAMETER):
 
 
 def addresstohash(PARAMETER):
-	"""Returns the public key hash encoded in an address.
-	   [PARAMETER] is required and should be a DRK address.
+	"""
+	Returns the public key hash encoded in an address.
+	[PARAMETER] is required and should be a DRK address.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('addresstohash') + '/' + str(PARAMETER))
@@ -77,18 +80,19 @@ def addresstohash(PARAMETER):
 
 
 def checkaddress(PARAMETER):
-	"""Checks if specified address is valid and returns _pubkeyhash_version_byte.
-	   [PARAMETER] is required and can be any crypto address.
 	"""
-
+	Checks if specified address is valid and returns _pubkeyhash_version_byte.
+	[PARAMETER] is required and can be any crypto address.
+	"""
 
 	d = urllib2.urlopen(blockexplorer('checkaddress') + '/' + str(PARAMETER))
 	return d.read()
 
 
 def decode_address(PARAMETER):
-	"""Returns the version prefix and hash encoded in an address.
-	   [PARAMETER] is required and can be any crypto address.
+	"""
+	Returns the version prefix and hash encoded in an address.
+	[PARAMETER] is required and can be any crypto address.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('decode_address') + '/' + str(PARAMETER))
@@ -96,8 +100,9 @@ def decode_address(PARAMETER):
 
 
 def getreceivedbyaddress(PARAMETER):
-	"""Returns amount of DRK received by an address.
-	   [PARAMETER] is required and should be a DRK address.
+	"""
+	Returns amount of DRK received by an address.
+	[PARAMETER] is required and should be a DRK address.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('getreceivedbyaddress') + '/' + str(PARAMETER))
@@ -105,8 +110,9 @@ def getreceivedbyaddress(PARAMETER):
 
 
 def getsentbyaddress(PARAMETER):
-	"""Returns amount of DRK sent by an address.
-	   [PARAMETER] is required and should be a DRK address.
+	"""
+	Returns amount of DRK sent by an address.
+	[PARAMETER] is required and should be a DRK address.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('getsentbyaddress') + '/' + str(PARAMETER))
@@ -114,8 +120,9 @@ def getsentbyaddress(PARAMETER):
 
 
 def hashpubkey(PARAMETER):
-	"""Returns the 160-bit hash of PUBKEY.
-	   [PARAMETER] is required and should be a PUBKEY.
+	"""
+	Returns the 160-bit hash of PUBKEY.
+	[PARAMETER] is required and should be a PUBKEY.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('hashpubkey') + '/' + str(PARAMETER))
@@ -123,8 +130,9 @@ def hashpubkey(PARAMETER):
 
 
 def hashtoaddress(PARAMETER):
-	"""Converts a 160-bit hash to an address.
-	   [PARAMETER] is required and should be an address hash.
+	"""
+	Converts a 160-bit hash to an address.
+	[PARAMETER] is required and should be an address hash.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('hashtoaddress') + '/' + str(PARAMETER))
@@ -132,8 +140,9 @@ def hashtoaddress(PARAMETER):
 
 
 def translate_address(PARAMETER):
-	"""Translates address for use in DRK chain.
-	   [PARAMETER] is required and can be any crypto address.
+	"""
+	Translates address for use in DRK chain.
+	[PARAMETER] is required and can be any crypto address.
 	"""
 
 	d = urllib2.urlopen(blockexplorer('translate_address') + '/' + str(PARAMETER))
@@ -141,8 +150,9 @@ def translate_address(PARAMETER):
 
 
 def generate_address():
-	"""Returns a valid darkcoin address and it's matching private key.
-	   On OSX run this in i386 mode.
+	"""
+	Returns a valid darkcoin address and it's matching private key.
+	On OSX run this in i386 mode.
 	"""
 
 	return get_addr(gen_eckey(compressed=True,version=111),version=111)

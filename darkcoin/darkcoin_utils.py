@@ -6,13 +6,14 @@ import ctypes
 import hashlib
 import ctypes.util
 
-__title__   = 'darkcoin'
+__title__ = 'darkcoin'
 __version__ = '0.2'
-__author__  = '@c0ding'
-__repo__    = 'https://github.com/c0ding/darkcoin-api'
+__author__ = '@c0ding'
+__repo__ = 'https://github.com/c0ding/darkcoin-api'
 __license__ = 'Apache v2.0 License'
 
-"""This part of the code is where the magic happens.
+"""
+This part of the code is where the magic happens.
 Joric/bitcoin-dev, june 2012, public domain
 modified by c0ding, 2014
 """
@@ -83,7 +84,7 @@ class KEY:
 			form = self.POINT_CONVERSION_UNCOMPRESSED
 		ssl.EC_KEY_set_conv_form(self.k, form)
 
-		
+
 def dhash(s):
 	return hashlib.sha256(hashlib.sha256(s).digest()).digest()
 
@@ -196,18 +197,20 @@ CRYPTOCOIN_API = 'http://api.cryptocoincharts.info/tradingPair/'
 
 
 def blockexplorer(*suffix):
-	"""Returns the entrypoint URL for the Darkcoin block API.
-	   All data provided by explorer.darkcoin.io.
-	   http://explorer.darkcoin.io/
+	"""
+	Returns the entrypoint URL for the Darkcoin block API.
+	All data provided by explorer.darkcoin.io.
+	http://explorer.darkcoin.io/
 	"""
 
 	return DRK_BLOCKEXPLORER + '/'.join(suffix)
 
 
 def exchange(*suffix):
-	"""Returns the entrypoint URL for the Darkcoin price API.
-	   All data provided by CryptoCoin.
-	   http://www.cryptocoincharts.info
+	"""
+	Returns the entrypoint URL for the Darkcoin price API.
+	All data provided by CryptoCoin.
+	http://www.cryptocoincharts.info
 	"""
 
 	return CRYPTOCOIN_API + '/'.join(suffix)

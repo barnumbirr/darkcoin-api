@@ -8,10 +8,10 @@
 # | (_| | (_| | |  |   < (_| (_) | | | | |
 #  \__,_|\__,_|_|  |_|\_\___\___/|_|_| |_|
 
-__title__   = 'darkcoin'
+__title__ = 'darkcoin'
 __version__ = '0.2'
-__author__  = '@c0ding'
-__repo__    = 'https://github.com/c0ding/darkcoin-api'
+__author__ = '@c0ding'
+__repo__ = 'https://github.com/c0ding/darkcoin-api'
 __license__ = 'Apache v2.0 License'
 
 from darkcoin_api import (
